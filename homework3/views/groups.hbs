@@ -1,0 +1,18 @@
+<h1>Групи</h1>
+
+<h2>Список груп</h2>
+<ul class="collection">
+    {{#each groups}}
+        <li class="collection-item">{{this.name}}</li>
+    {{else}}
+        <li class="collection-item">Груп поки немає.</li>
+    {{/each}}
+</ul>
+
+<h2>Додати нову групу</h2>
+<form action="/groups" method="POST" class="form">
+    <label for="name">Назва нової групи:</label>
+    <input type="text" id="name" name="name" required>
+
+    <button type="submit" class="btn waves-effect waves-light" style="margin-top: 10px;">Додати групу</button>
+</form>
